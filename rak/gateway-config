@@ -101,7 +101,7 @@ do_copy_global_conf() {
 
 do_set_channel_plan() {
   default_item=1
-    FUN=$(dialog --title "TTN Channel-plan configuration" --default-item $default_item --menu "Select the Channel-plan:" 18 60 12 \
+    FUN=$(dialog --title "TTN Channel-plan configuration" --default-item $default_item --menu "Select the Channel-plan:" 20 60 12 \
         1  "AS_923(915_928)" \
         2  "AS_923_2(920_923)" \
         3  "AS_923_3(915_921)" \
@@ -113,6 +113,7 @@ do_set_channel_plan() {
         9  "KR_920_923" \
         10 "RU_864_870" \
         11 "US_902_928" \
+	12 "AS_923_925" \
         3>&1 1>&2 2>&3)
     RET=$?
     if [ $RET -eq 1 ]; then
@@ -130,6 +131,7 @@ do_set_channel_plan() {
             9)  do_copy_global_conf $1 "kr_920_923" 6;;
             10) do_copy_global_conf $1 "ru_864_870" 7;;
             11) do_copy_global_conf $1 "us_902_928" 8;;
+	    12) do_copy_global_conf $1 "as_923_925" 1;;
         esac
   fi
 }
