@@ -36,7 +36,7 @@ step2 : Use "sudo raspi-config" command, enable spi and i2c interface, disable l
 step3 : Clone the installer and start the installation (More installation options can be found in "sudo ./install.sh --help").
 
       $ sudo apt update; sudo apt install git -y
-      $ git clone https://github.com/RAKWireless/rak_common_for_gateway.git ~/rak_common_for_gateway
+      $ git clone https://github.com/intERLab-AIT/rak_common_for_gateway.git ~/rak_common_for_gateway
       $ cd ~/rak_common_for_gateway
       $ sudo ./install.sh
 
